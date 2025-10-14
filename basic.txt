@@ -21,13 +21,12 @@
   //Mobs
   :?foe ! boss
     >@foe.name@
-    ?foe ! huge_mosquito & foe.distance <= 16 & 
+    ?foe = scarab & foe.distance <= 16 & 
     ^ foe.distance >= 11
       equipR dashing
     :?foe = huge_mosquito
-      equipL crossbow
-    :?foe = scarab
-      equipL sword
+      equipR crossbow
+      equipL ouroboros
     :?pickup.distance < 10
       equipL star
     :?foe.distance > 8 & hp < (maxhp - 10)
