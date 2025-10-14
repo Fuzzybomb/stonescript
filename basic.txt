@@ -10,10 +10,9 @@ func AAC()
   ?hp < 7
     activate potion
   
+  AAC()
   equipL sword
   equipR shield
-
-  AAC()
 
   ?foe ! boss & foe.distance > 8
     equipL ouroboros
