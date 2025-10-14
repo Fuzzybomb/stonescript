@@ -4,11 +4,15 @@
   
   equipL sword
   equipR shield
-  ?foe = mosquito
-    equip crossbow
   
-  ?harvest.distance < 10
-    equip hatchet
+  ?foe = boss
+    ?foe.debuffs.count = 0
+      equipR dp
+    equipL sword
+    equipR crossbow
+
+  :?foe = mosquito
+    equip crossbow
 
   ?foe ! boss & foe.distance > 8
     equipL ouroboros
