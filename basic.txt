@@ -15,6 +15,8 @@
   ?foe.count < 1:
     equipL ouroboros
     equipR shield
+    ?pickup.distance < 10
+      equipL star
 
   //Mobs
   :?foe ! boss
