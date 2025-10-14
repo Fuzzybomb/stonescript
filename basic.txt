@@ -1,3 +1,11 @@
+func AAC()
+  ?item.left.state = 3 & item.left ! dp
+    equipL *0 wand //trash
+    equipL @item.left@
+  ?item.right.state = 3 & item.left ! dp
+    equipR *0 shield //trash
+    equip @item.right@
+
 ?loc = deadwood
   ?hp < 7
     activate potion
@@ -15,16 +23,10 @@
     equip crossbow
 
   ?foe = boss
-    equipL sword
-    equipR shield
+    AAC()
     ?foe.debuffs.count = 0
       equipR dp
   
-  >@item.left.state@
 
-  ?item.left.state = 3 & item.left ! dp
-    equipL *0 wand //trash
-    equipL @item.left@
-  ?item.right.state = 3 & item.left ! dp
-    equipR *0 shield //trash
-    equip @item.right@
+
+
