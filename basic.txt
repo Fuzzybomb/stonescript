@@ -11,14 +11,15 @@
   ?hp < 7
     activate potion
   
-  ?foe ! boss & ?foe.distance > 8
-    equipL ouroboros
-    ?pickup.distance < 10
-    equipL star
-        
   ?foe ! boss
-    ?foe = mosquito
+    ?foe.distance > 8
+    equipL ouroboros
+    
+    :?foe = mosquito
       equipL crossbow
+    
+    :?pickup.distance < 10
+    equipL star
     :
       equipL sword
       equipR shield
