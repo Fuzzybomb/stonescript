@@ -86,14 +86,14 @@
   //No Enemies
   ?foe.count < 1
     equipL ouroboros
-    equipR shield
+    equipR poison shield
     ?pickup.distance < 10
       equipL star
   
   //Mobs
   :?foe ! boss
     
-    :?pickup.distance < 10
+    ?pickup.distance < 10
       equipL star
     :?foe.distance > 8 & hp < (maxhp - 10)
       equipL ouroboros
