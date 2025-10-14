@@ -12,7 +12,7 @@
     activate potion
   
   //No Enemies
-  ?foe.count < 1:
+  ?foe.count < 1
     equipL ouroboros
     equipR shield
     ?pickup.distance < 10
