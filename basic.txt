@@ -58,7 +58,7 @@
     :?foe.distance > 8 & hp < (maxhp - 10)
       equipL ouroboros
     :
-      equipL crossbow
+      equipL wand_ice
       equipR shield
     
   //Bossing
