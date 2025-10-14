@@ -93,23 +93,21 @@
   //Mobs
   :?foe ! boss
     
-    ?foe.distance >= 11 & foe.distance <= 16
-      equipR dashing
     :?pickup.distance < 10
       equipL star
     :?foe.distance > 8 & hp < (maxhp - 10)
       equipL ouroboros
     :
-      equipL ice wand
-      equipR shield
+      equipL poison wand
+      equipR poison shield
     
   //Bossing
   :?foe = boss
     ?foe.debuffs.count = 0
       equipR dp
     :
-      equipL crossbow
-      equipR shield
+      equipL poison wand
+      equipR poison shield
 
 
 
