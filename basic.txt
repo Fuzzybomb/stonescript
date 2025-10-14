@@ -1,31 +1,35 @@
-func AAC()
-  ?item.left.state = 3
-    equipL *0 wand //trash
-    equipL @item.left@
-  ?item.right.state = 3
-    equipR *0 shield //trash
-    equip @item.right@
+//Action Animation Cancel
+?item.left.state = 3
+  equipL *0 wand //trash
+  equipL @item.left@
+?item.right.state = 3
+  equipR *0 shield //trash
+  equip @item.right@
+
 
 ?loc = deadwood
   ?hp < 7
     activate potion
   
-  AAC()
-  equipL sword
-  equipR shield
-
-  ?foe ! boss & foe.distance > 8
+  ?foe ! boss & ?foe.distance > 8
     equipL ouroboros
-  
-  ?pickup.distance < 10
+    ?pickup.distance < 10
     equipL star
-
-  ?foe = mosquito
-    equip crossbow
-
-  ?foe = boss
+        
+  ?foe ! boss
+    ?foe = mosquito
+      equipL crossbow
+    :
+      equipL sword
+      equipR shield
+    
+  
+  :?foe = boss
     ?foe.debuffs.count = 0
       equipR dp
+    :
+      equip sword
+      equip crossbow
   
 
 
