@@ -20,8 +20,9 @@
   
   //Mobs
   :?foe ! boss
-    ?foe.distance >= 11 & foe.distance <= 16 & 
-    ^foe ! mosquito
+    >@foe.name@
+    ?foe ! mosquito & foe.distance <= 16 & 
+    ^ foe.distance >= 11
       equipR dashing
     :?foe = mosquito
       equipL crossbow
@@ -78,8 +79,8 @@
       equipL crossbow
       equipR shield
 
-/* ------- Caves ------- */
-:?loc = Caves
+/* ------- Mushroom ------- */
+:?loc = Mushroom
   ?hp < 7
     activate potion
   
