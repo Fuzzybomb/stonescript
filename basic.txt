@@ -41,38 +41,34 @@
       equipL sword
       equipR crossbow
 
-:?loc = deadwood
+:?loc = Caves
   ?hp < 7
     activate potion
   
   //No Enemies
   ?foe.count < 1
     equipL ouroboros
-    equipR shield
+    equipR ice shield
     ?pickup.distance < 10
       equipL star
   
   //Mobs
   :?foe ! boss
-    ?foe = mosquito
-      equipL crossbow
-    :?foe = scarab
-      equipL sword
     :?pickup.distance < 10
       equipL star
     :?foe.distance > 8
       equipL ouroboros
     :
-      equipL sword
-      equipR shield
+      equipL ice wand
+      equipR ice shield
     
   //Bossing
   :?foe = boss
     ?foe.debuffs.count = 0
       equipR dp
     :
-      equipL sword
-      equipR crossbow
+      equipL ice wand
+      equipR ice shield
 
 
 
