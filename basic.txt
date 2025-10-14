@@ -19,9 +19,10 @@
     equipR crossbow
     ?foe.debuffs.count = 0
       equipR dp
-    ?item.left.state = 3
-      equipL stone throwing
-      equipL @item.left@
-    ?item.right.state = 3
-      equipR shield *0*
-      equip @item.right@
+  
+  ?item.left.state = 3
+    equipL *0 wand //trash
+    equipL @item.left@
+  ?item.right.state = 3
+    equipR *0 shield //trash
+    equip @item.right@
