@@ -6,7 +6,7 @@
   equipR shield
   ?foe = mosquito
     equip crossbow
-  ad
+  
   ?harvest.distance < 10
     equip hatchet
 
