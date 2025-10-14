@@ -11,10 +11,17 @@
   ?hp < 7
     activate potion
   
-  ?foe ! boss
+  //No Enemies
+  ?foe.count < 1:
+    equipL ouroboros
+    equipR shield
+
+  //Mobs
+  :?foe ! boss
     ?foe = mosquito
       equipL crossbow
-
+    ?foe = scarab
+      equipL sword
     :?pickup.distance < 10
       equipL star
     :?foe.distance > 8
@@ -23,13 +30,13 @@
       equipL sword
       equipR shield
     
-  
+  //Bossing
   :?foe = boss
     ?foe.debuffs.count = 0
       equipR dp
     :
-      equip sword
-      equip crossbow
+      equipL sword
+      equipR crossbow
   
 
 
