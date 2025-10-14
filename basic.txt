@@ -1,8 +1,8 @@
 func AAC()
-  ?item.left.state = 3 & item.left ! dp
+  ?item.left.state = 3
     equipL *0 wand //trash
     equipL @item.left@
-  ?item.right.state = 3 & item.left ! dp
+  ?item.right.state = 3
     equipR *0 shield //trash
     equip @item.right@
 
@@ -12,6 +12,8 @@ func AAC()
   
   equipL sword
   equipR shield
+
+  AAC()
 
   ?foe ! boss & foe.distance > 8
     equipL ouroboros
@@ -23,7 +25,6 @@ func AAC()
     equip crossbow
 
   ?foe = boss
-    AAC()
     ?foe.debuffs.count = 0
       equipR dp
   
