@@ -53,7 +53,7 @@
   
   //Mobs
   :?foe ! boss
-    :?pickup.distance < 10
+    ?pickup.distance < 10
       equipL star
     :?foe.distance > & hp < (maxhp - 10)
       equipL ouroboros
