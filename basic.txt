@@ -26,7 +26,7 @@
       equipL sword
     :?pickup.distance < 10
       equipL star
-    :?foe.distance > 8
+    :?foe.distance > 8 & hp < (maxhp - 10)
       equipL ouroboros
     :
       equipL sword
@@ -55,7 +55,7 @@
   :?foe ! boss
     :?pickup.distance < 10
       equipL star
-    :?foe.distance > 8
+    :?foe.distance > & hp < (maxhp - 10)
       equipL ouroboros
     :
       equipL crossbow
