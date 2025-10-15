@@ -109,5 +109,34 @@
       equipL poison wand
       equipR poison shield
 
+/* ------- Halls ------- */
+:?loc = Halls
+  ?hp < 7
+    activate potion
+  
+  //No Enemies
+  ?foe.count < 1
+    equipL ouroboros
+    equipR shield
+    ?pickup.distance < 10
+      equipL star
+  
+  //Mobs
+  :?foe ! boss
+    
+    ?pickup.distance < 10
+      equipL star
+    :
+      equipL vigor wand
+      equipR dL
+    
+  //Bossing
+  :?foe = boss
+    ?foe.debuffs.count = 0
+      equipR dp
+    :
+      equipL vigor wand
+      equipR dL
+
 
 
