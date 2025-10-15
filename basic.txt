@@ -128,7 +128,7 @@
       equipL star
     :
       equipL vigor wand dL
-      equipR vigor wand 
+      equipR vigor wand D
     
   //Bossing
   :?foe = boss
@@ -136,7 +136,7 @@
       equipR dp
     :
       equipL vigor wand dL
-      equipR vigor wand
+      equipR vigor wand D
 
 
 
