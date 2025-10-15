@@ -127,16 +127,16 @@
     ?pickup.distance < 10
       equipL star
     :
-      equipL vigor wand
-      equipR dL
+      equipL vigor wand dL
+      equipR vigor wand 
     
   //Bossing
   :?foe = boss
     ?foe.debuffs.count = 0
       equipR dp
     :
-      equipL vigor wand
-      equipR dL
+      equipL vigor wand dL
+      equipR vigor wand
 
 
 
